@@ -1,0 +1,20 @@
+<%- include("header.ejs") %>
+<section>
+    <h1>My Blog Post</h1>
+    <%if(locals.contents){%>
+        <%for(content of contents){%>
+            <h2><%= content.title %></h2>
+            <hr/>
+            <p><%= content.content%></p>
+            <hr/>
+            <span><b>author: </b><%= content.author %>&nbsp;&nbsp;&nbsp;&nbsp;<b>Date: </b><%= content.date%></span>
+            <br/><br/>
+            <form method="post">
+                <input formaction="/posts/<%= content.id %>" id="view" value="<%= locals.viewButton %>" type="submit">
+                &nbsp;&nbsp;&nbsp;<input formaction="/post/edit/:id" id="edit" value="<%= locals.editButton %>" type="submit">
+            </form>
+        <%}%>
+    <%}%>
+</section>
+    <br/><br/>
+<%- include("footer.ejs") %>

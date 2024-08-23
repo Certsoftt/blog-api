@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    margin-top: 30px;
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    border: 1px solid silver;
+    box-shadow: 1px 2px 1px 1px;
+    padding: 30px;
+    border-radius: 30px;
+}
+h1{
+    margin-bottom: 10px;
+}
+h2{
+    margin-top:10px;
+}
+p, span{
+    margin: 10px 0;
+}
+hr:nth-child(even), hr:nth-child(odd){
+    margin-bottom: 20px;
+}
+input{
+    padding: 5px;
+    border: none;
+    border-radius: 15%;
+}
+input#view{
+    background: green;
+    color: beige;
+}
+input#edit{
+    background: rgb(231, 46, 77);
+    color: antiquewhite;
+}

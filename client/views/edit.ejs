@@ -1,0 +1,14 @@
+<%- include("header.ejs") %>
+<section>
+    <h1>Post <%= content.id %></h1>
+    <%if(locals.content){%>
+        <h2><%= content.title %></h2>
+        <hr/>
+        <p><%= content.content%></p>
+        <hr/>
+        <span><b>author: </b><%= content.author %>&nbsp;&nbsp;&nbsp;&nbsp;<b>Date: </b><%= content.date%></span>
+        <br/><br/>
+    <%}%>
+</section>
+<br/><br/>
+<%- include("footer.ejs") %>
